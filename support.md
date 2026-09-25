@@ -55,4 +55,4 @@ report content that breaks the rules, use Report in the app or email
 [support@getdareapp.com](mailto:support@getdareapp.com) with the username and
 what happened.
 
-See also our [Privacy Policy]({{ '/privacy' | relative_url }}).
+See also our [Terms of Use]({{ '/terms' | relative_url }}) and [Privacy Policy]({{ '/privacy' | relative_url }}).
