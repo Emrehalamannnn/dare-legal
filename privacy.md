@@ -1,5 +1,6 @@
 ---
 title: DARE Privacy Policy
+layout: page
 permalink: /privacy
 ---
 

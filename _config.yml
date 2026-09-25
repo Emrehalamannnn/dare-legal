@@ -1,2 +1,8 @@
 title: DARE
-theme: jekyll-theme-minimal
+description: One dare. Everyone. Every day. Do the daily dare, post your proof, and let your friends vote with 🔥.
+url: https://getdareapp.com
+markdown: kramdown
+defaults:
+  - scope: { path: "" }
+    values: { layout: page }
+exclude: [README.md]
