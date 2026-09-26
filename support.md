@@ -15,7 +15,7 @@ to you, usually within 1–2 days.
 
 <details>
 <summary>When does the daily dare drop?</summary>
-<p>A new dare drops for everyone every day, and you'll get a notification when it does. You have until the timer runs out to post your proof.</p>
+<p>Every day at a surprise moment between 12:00 and 21:00 (Türkiye time), the same for everyone. You'll get a notification, then you have 30 minutes. Late? You can still post until the day ends, but your post shows how many minutes late it was.</p>
 </details>
 
 <details>
