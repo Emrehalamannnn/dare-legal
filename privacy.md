@@ -42,9 +42,10 @@ To keep DARE safe, dares, captions, photos and still frames from videos are
 checked by an automated safety service before others can see them. We use
 **OpenAI's moderation service** for this; it receives the content only to
 check it and doesn't use it to train models. Content involving under-18
-players is checked more strictly. Reported content, and content the
-automated check can't decide, is reviewed by our moderators, who can remove
-it and suspend accounts that break the community rules.
+players is checked more strictly. Reported content is checked again by the
+same automated service, more strictly, and removed if it breaks the community
+rules; accounts that break the rules can be suspended automatically. If you
+think a decision was wrong, email us and a person will look at it.
 
 ## Who can see what
 

@@ -51,10 +51,12 @@ abuse of minors is reported to the authorities.
 ## 4. How we keep DARE safe
 
 - Every dare, photo and video goes through an **automatic AI safety check**
-  before anyone else can see it. Some items are also looked at by a person.
+  before anyone else can see it.
 - You can **report** any post, dare or person, and **block** anyone, in two
-  taps. We review reports **within 24 hours** and remove content and accounts
-  that break the rules.
+  taps. Reports are handled **automatically within minutes**: reported content
+  is checked again, more strictly, and removed if it breaks the rules, and
+  accounts that break the rules are suspended.
+- Think we got it wrong? Email us and a person will look at it.
 - Automatic checks aren't perfect. If you see something that slipped through,
   please report it or email us.
 
