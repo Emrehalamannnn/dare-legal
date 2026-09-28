@@ -8,10 +8,19 @@ invite: true
 <html lang="en">
 <head>
 {% include head.html %}
-<!-- TODO(App Store id): turn on the Smart App Banner once DARE is on the App Store
-     (replace APP_STORE_ID, and fill in APP_STORE_ID in the script below too):
-<meta name="apple-itunes-app" content="app-id=APP_STORE_ID, app-argument=https://getdareapp.com/s/">
--->
+<!-- Smart App Banner (Safari on iPhone): "Get" DARE, or "Open" it with this invite when it's
+     installed (app-argument, which DARE opens like the link). Safari draws it; it tracks nothing. -->
+<meta name="apple-itunes-app" id="app-banner" content="app-id=6816425422, app-argument=https://getdareapp.com/s/">
+<script>
+  // The banner opens DARE with this very invite (only a valid squad code).
+  (function () {
+    var raw = (new URLSearchParams(window.location.search).get("c") || "").trim().toUpperCase();
+    if (/^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{10}$/.test(raw)) {
+      document.getElementById("app-banner").setAttribute("content",
+        "app-id=6816425422, app-argument=https://getdareapp.com/s/?c=" + raw);
+    }
+  })();
+</script>
 </head>
 <body>
 {% include header.html %}
@@ -52,11 +61,15 @@ invite: true
 
 <script>
 (function () {
-  // TODO(App Store id): fill these in once DARE is on the App Store. Until then
-  // the button goes to the home page. The campaign token (ct) lets App Store
-  // Connect count which invites bring people, without any tracking here.
-  var APP_STORE_ID = "";   // e.g. "6712345678"
-  var PROVIDER_TOKEN = ""; // App Store Connect → App Analytics → Campaigns (pt=)
+  // DARE on the App Store (the same id as AppLinks.appStoreID in the app). The
+  // campaign token (ct) lets App Store Connect count which invites bring
+  // people, without any tracking here.
+  var APP_STORE_ID = "6816425422";
+  // TODO(provider token): App Store Connect → App Analytics → Campaigns →
+  // "Generate a campaign link" shows your provider token (pt=...). Paste it
+  // here. Until then the button still opens DARE on the App Store, but App
+  // Store Connect can't count which invites (ct) bring people.
+  var PROVIDER_TOKEN = "";
 
   var params = new URLSearchParams(window.location.search);
   var raw = (params.get("c") || "").trim().toUpperCase();
