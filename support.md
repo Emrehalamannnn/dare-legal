@@ -15,7 +15,7 @@ to you, usually within 1–2 days.
 
 <details>
 <summary>When does the daily dare drop?</summary>
-<p>Every day at a surprise moment between 12:00 and 21:00 (Türkiye time), the same for everyone. You'll get a notification, then you have 30 minutes. Late? You can still post until the day ends, but your post shows how many minutes late it was.</p>
+<p>Every day at a surprise moment in your Drop Zone's window, for example between 12:00 and 21:00 New York time in the Americas. In the app, Me → Settings → Drop zone shows the window in your own time. It's the same dare for everyone. You'll get a notification, then you have 30 minutes. Late? You can still post until 03:00 on your zone's clock; your post shows how many minutes after the drop it came.</p>
 </details>
 
 <details>
@@ -25,17 +25,17 @@ to you, usually within 1–2 days.
 
 <details>
 <summary>Why is my post, photo or dare "being checked"?</summary>
-<p>Everything goes through a quick safety check before anyone else can see it. It usually takes a few seconds. If something was held for a moderator, it can take longer.</p>
+<p>Everything goes through an automatic AI safety check before anyone else can see it. It usually takes a few seconds.</p>
 </details>
 
 <details>
 <summary>How many times can I dare a friend?</summary>
-<p>You can dare the same friend once every 3 days, and send up to 2 friend dares per day, on top of the daily dare.</p>
+<p>Only friends can dare each other. You can dare the same friend once every 3 days, and everyone gets at most 2 friend dares a day, on top of the daily dare.</p>
 </details>
 
 <details>
 <summary>How do I report or block someone?</summary>
-<p>Tap ••• on their post and choose Report, or open their profile and tap Report or Block. Our moderators review reports every day.</p>
+<p>Tap ••• on their post and choose Report, or open their profile and tap Report or Block. Our automatic safety check looks at every report again within minutes. If you think a decision was wrong, email <a href="mailto:support@getdareapp.com">support@getdareapp.com</a>.</p>
 </details>
 
 <details>
