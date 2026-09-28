@@ -52,9 +52,10 @@ think a decision was wrong, email us and a person will look at it.
 
 - **Friends** see your daily proof after they post theirs, and your friend dares and duels.
 - **Everyone** can see your daily posts on Discover only if your account is **public**. Under-18 accounts start private.
+- **Profile photos:** an adult's profile photo is shown wherever their name is. An under-18's profile photo is only shown to their friends; everyone else sees their emoji avatar.
 - **Hall of Fame** only shows you if you said yes.
-- **Squads:** people in a squad see each other's names, avatars and weekly points on the squad's leaderboard, friends or not (a squad doesn't show them your posts). Anyone with a squad's invite link can join; its creator and admins can reset the link and remove people.
-- **People you may know:** DARE may suggest you to friends of your friends and to people in your squads (with your name, username and avatar), so they can send you a friend request. It never uses anyone's contacts. Under-18s are only suggested to people they share at least 2 friends or a squad with, and never with their photo. You can turn this off in **Settings → Suggest me to friends of friends**.
+- **Squads:** people in a squad see each other's names, avatars and weekly points on the squad's leaderboard, friends or not (a squad doesn't show them your posts; an under-18's photo only shows to their friends). Anyone with a squad's invite link can join; its creator and admins can reset the link and remove people, and anyone in a squad can report or block anyone in it.
+- **People you may know:** DARE may suggest you to friends of your friends and to people in your squads (with your name, username and avatar), so they can send you a friend request. It never uses anyone's contacts. An adult and an under-18 are only suggested to each other when they share at least 2 friends, or a squad and a friend, and an under-18 is never shown with their photo. It starts off for under-18s. You can turn it on or off in **Settings → Suggest me to friends of friends**.
 - Blocked people can't see you.
 
 ## How long we keep it
