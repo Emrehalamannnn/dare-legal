@@ -21,7 +21,7 @@ Contact: **support@getdareapp.com**.
 
 | What | Why | Where it's stored |
 |---|---|---|
-| Email address (from Sign in with Apple or an email code) | To sign you in | Our database (Supabase) |
+| Email address (from Sign in with Apple, Google or an email code) | To sign you in | Our database (Supabase) |
 | Username, display name, avatar emoji and colour | Your profile | Our database |
 | Birthdate | Only to keep under-18 players safe (safer dares, private by default, stricter checks). Never shown to anyone. You must be 13+. | Our database, in a private area the app can't read |
 | Country and city you type in | City and country leaderboards | Our database |
@@ -33,7 +33,7 @@ Contact: **support@getdareapp.com**.
 | Push notification token | To send the notifications you turned on | Our database |
 | Crash reports from iOS (what the app was doing when it crashed, app and iOS version) | To fix bugs. Not linked to your account | Our database, deleted after 90 days |
 | Your app's language | To send notifications and the daily dare in your language | Our database |
-| Your phone's time zone (for example Europe/Berlin) and whether it shows 24-hour times | To put you in a Drop Zone (when the daily dare drops for you), to keep notifications out of the night, and to write times in notifications the way your phone does. Friends see your Drop Zone (for example "not dropped yet in the Americas"), never your time zone | Our database |
+| Your phone's time zone (for example Europe/Berlin), its difference from UTC (for example +2 hours) and whether it shows 24-hour times | To put you in a Drop Zone (when the daily dare drops for you), to keep notifications out of the night, and to write times in notifications the way your phone does. Friends see your Drop Zone (for example "not dropped yet in the Americas"), never your time zone | Our database |
 | When you last opened the app | To stop daily dare notifications when you haven't opened DARE for a few days (you then get at most 3 come-back messages) and to show "Welcome back" when you return. Never shown to anyone | Our database |
 | Your "Suggest me to friends of friends" setting, and people you hid from People you may know | To suggest you (or not) to friends of your friends and people in your squads, and to not show you people you hid again | Our database |
 | Squad invite codes (the code in a squad's invite link and QR code) | So people who get the link can join the squad. Its creator and admins can make a new one, and the old link stops working | Our database |
@@ -66,7 +66,7 @@ think a decision was wrong, email us and a person will look at it.
 - **Everyone** can see your daily posts on Discover only if your account is **public**. Under-18 accounts start private.
 - **Profile photos:** an adult's profile photo is shown wherever their name is. An under-18's profile photo is only shown to their friends; everyone else sees their emoji avatar.
 - **Hall of Fame** only shows you if you said yes.
-- **Squads:** people in a squad see each other's names, avatars and weekly points on the squad's leaderboard, friends or not (a squad doesn't show them your posts; an under-18's photo only shows to their friends). Anyone with a squad's invite link can join; its creator and admins can reset the link and remove people, and anyone in a squad can report or block anyone in it.
+- **Squads:** people in a squad see each other's names, avatars and weekly points on the squad's leaderboard, friends or not (a squad doesn't show them your posts; an under-18's photo only shows to their friends). Anyone with a squad's invite link can join; its creator and admins can reset the link and remove people, and anyone in a squad can report or block anyone in it. People who blocked each other don't see each other in a squad. An adult and an under-18 who share a squad but no friend see each other without the option to add each other as friends there, and the adult only sees the under-18's avatar and display name (no username or country). A squad's name is checked by the automated safety check before people outside the squad (for example someone opening its invite link) see it.
 - **People you may know:** DARE may suggest you to friends of your friends and to people in your squads (with your name, username and avatar), so they can send you a friend request. It never uses anyone's contacts. An adult and an under-18 are only suggested to each other when they share at least 2 friends, or a squad and a friend, and an under-18 is never shown with their photo. It starts off for under-18s. You can turn it on or off in **Settings → Suggest me to friends of friends**.
 - Blocked people can't see you.
 
@@ -104,6 +104,8 @@ back into the email, until the 13th birthday they gave. Then it's deleted too.
 - **Supabase** (database, sign-in, storage) — servers in Frankfurt, Germany (EU)
 - **Apple** (Sign in with Apple, In-App Purchases, push notifications)
 - **OpenAI** (automated safety checks)
+- **Google** (Google sign-in, if you choose it)
+- **Resend** (sends the sign-in code emails)
 
 ## Changes
 
