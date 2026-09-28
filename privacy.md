@@ -34,7 +34,8 @@ Contact: **support@getdareapp.com**.
 | Your app's language | To send notifications and the daily dare in your language | Our database |
 
 We don't use advertising trackers, we don't sell your data, and we don't
-track you across other companies' apps or websites.
+track you across other companies' apps or websites. The invite pages our
+links open (getdareapp.com/add and /s) use no cookies and no tracking.
 
 ## Safety checks
 
@@ -52,6 +53,7 @@ think a decision was wrong, email us and a person will look at it.
 - **Friends** see your daily proof after they post theirs, and your friend dares and duels.
 - **Everyone** can see your daily posts on Discover only if your account is **public**. Under-18 accounts start private.
 - **Hall of Fame** only shows you if you said yes.
+- **Squads:** people in a squad see each other's names, avatars and weekly points on the squad's leaderboard, friends or not (a squad doesn't show them your posts). Anyone with a squad's invite link can join; its creator and admins can reset the link and remove people.
 - Blocked people can't see you.
 
 ## How long we keep it
