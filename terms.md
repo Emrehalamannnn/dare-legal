@@ -6,7 +6,7 @@ permalink: /terms
 
 # DARE Terms of Use
 
-_Last updated: September 25, 2026_
+_Last updated: September 28, 2026_
 
 Welcome to DARE. By creating an account or using the app you agree to these
 terms and to our [Privacy Policy]({{ "/privacy" | relative_url }}). If you don't agree, please don't
@@ -50,12 +50,15 @@ abuse of minors is reported to the authorities.
 
 ## 4. How we keep DARE safe
 
-- Every dare, photo and video goes through an **automatic AI safety check**
-  before anyone else can see it.
+- Every dare, photo, caption and selfie goes through an **automatic AI safety
+  check** before anyone else can see it. Videos are checked through still
+  frames taken from them.
 - You can **report** any post, dare or person, and **block** anyone, in two
   taps. Reports are handled **automatically within minutes**: reported content
-  is checked again, more strictly, and removed if it breaks the rules, and
-  accounts that break the rules are suspended.
+  is checked again and removed if it breaks the rules. Pictures that break the
+  rules count against the account that posted them: repeated ones lead to a
+  suspension, and sexual content involving minors to a permanent ban, with the
+  content kept so it can be reported to the authorities.
 - Think we got it wrong? Email us and a person will look at it.
 - Automatic checks aren't perfect. If you see something that slipped through,
   please report it or email us.
