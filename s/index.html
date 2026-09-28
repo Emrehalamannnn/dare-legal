@@ -1,0 +1,105 @@
+---
+layout: null
+title: Join a squad on DARE
+description: One dare a day. Your friends vote. Get DARE and join the squad.
+invite: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html %}
+<!-- TODO(App Store id): turn on the Smart App Banner once DARE is on the App Store
+     (replace APP_STORE_ID, and fill in APP_STORE_ID in the script below too):
+<meta name="apple-itunes-app" content="app-id=APP_STORE_ID, app-argument=https://getdareapp.com/s/">
+-->
+</head>
+<body>
+{% include header.html %}
+
+<!-- A squad's invite link: https://getdareapp.com/s/?c=<CODE> (&src=qr from a QR code).
+     With DARE installed, iPhone opens the app instead of this page (Universal Links)
+     and it shows the squad with a "Join squad" button. This page never looks the
+     squad up, so it doesn't show its name. -->
+<main class="invite">
+  <section class="invite-hero">
+    <div class="wrap invite-card">
+      <img class="invite-icon" src="{{ '/assets/img/icon.png' | relative_url }}" alt="" width="96" height="96">
+      <span class="eyebrow" id="who">Squad invite</span>
+      <h1 id="headline">Join the squad on <span class="grad">DARE</span></h1>
+      <p class="lead">One dare a day. Your friends vote.</p>
+      <p class="sub-lead" id="about">Squads are private groups with their own weekly leaderboard: your class, your team, your crew. Get DARE, then open this link again to join.</p>
+
+      <a class="btn" id="store" href="https://getdareapp.com">Get DARE</a>
+      <p class="soon" id="soon">Coming soon to the App Store for iPhone.</p>
+
+      <div class="invite-actions">
+        <a class="btn ghost" id="open" href="dareapp://today">Already have DARE? Open it</a>
+        <button class="btn ghost" id="copy" type="button">Copy invite</button>
+      </div>
+      <p class="note" id="copied" role="status" hidden></p>
+
+      <ul class="invite-steps">
+        <li><span aria-hidden="true">🎲</span> A surprise dare drops once a day, the same for everyone.</li>
+        <li><span aria-hidden="true">📸</span> Post your proof within 30 minutes.</li>
+        <li><span aria-hidden="true">🏆</span> Votes decide the squad's weekly leaderboard.</li>
+      </ul>
+      <p class="note">This page has no cookies and no tracking.</p>
+    </div>
+  </section>
+</main>
+
+{% include footer.html %}
+
+<script>
+(function () {
+  // TODO(App Store id): fill these in once DARE is on the App Store. Until then
+  // the button goes to the home page. The campaign token (ct) lets App Store
+  // Connect count which invites bring people, without any tracking here.
+  var APP_STORE_ID = "";   // e.g. "6712345678"
+  var PROVIDER_TOKEN = ""; // App Store Connect → App Analytics → Campaigns (pt=)
+
+  var params = new URLSearchParams(window.location.search);
+  var raw = (params.get("c") || "").trim().toUpperCase();
+  // The app's squad codes: 10 letters and digits that can't be mixed up.
+  var code = /^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{10}$/.test(raw) ? raw : null;
+  var campaign = params.get("src") === "qr" ? "squad_qr" : "squad_link";
+
+  var store = document.getElementById("store");
+  if (APP_STORE_ID) {
+    var url = "https://apps.apple.com/app/apple-store/id" + APP_STORE_ID + "?ct=" + campaign + "&mt=8";
+    if (PROVIDER_TOKEN) url += "&pt=" + encodeURIComponent(PROVIDER_TOKEN);
+    store.href = url;
+    store.textContent = "Download on the App Store";
+    document.getElementById("soon").hidden = true;
+  }
+
+  var copy = document.getElementById("copy");
+  var copied = document.getElementById("copied");
+  if (!code) {
+    document.getElementById("who").textContent = "Invite link";
+    document.getElementById("about").textContent = "This squad link looks broken. Ask whoever sent it for a new one.";
+    copy.hidden = true;
+    return;
+  }
+
+  var invite = "https://getdareapp.com/s/?c=" + code;
+  document.getElementById("open").href = "dareapp://s/" + code;
+
+  function done(ok) {
+    copied.textContent = ok
+      ? "Copied. Once DARE is installed, paste it in the app (Me → Add friends) to see the squad."
+      : "Copy this link: " + invite;
+    copied.hidden = false;
+  }
+  copy.addEventListener("click", function () {
+    var text = "Join my squad on DARE: " + invite;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+    } else {
+      done(false);
+    }
+  });
+})();
+</script>
+</body>
+</html>

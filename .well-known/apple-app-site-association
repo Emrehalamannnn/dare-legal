@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["K2RM3C7JU4.app.dare.Dare"],
+        "components": [
+          { "/": "/add/*", "comment": "Friend invites: /add/?u=<username>" },
+          { "/": "/s/*", "comment": "Squad invites: /s/?c=<code>" }
+        ]
+      }
+    ]
+  }
+}

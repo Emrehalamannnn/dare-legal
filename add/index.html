@@ -1,0 +1,109 @@
+---
+layout: null
+title: You're invited to DARE
+description: One dare a day. Your friends vote. Get DARE and add your friend.
+invite: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html %}
+<!-- TODO(App Store id): turn on the Smart App Banner once DARE is on the App Store
+     (replace APP_STORE_ID, and fill in APP_STORE_ID in the script below too):
+<meta name="apple-itunes-app" content="app-id=APP_STORE_ID, app-argument=https://getdareapp.com/add/">
+-->
+</head>
+<body>
+{% include header.html %}
+
+<!-- A friend's invite link: https://getdareapp.com/add/?u=<username> (&src=qr from a QR code).
+     With DARE installed, iPhone opens the app instead of this page (Universal Links,
+     see /.well-known/apple-app-site-association) and it asks "Add @username as a friend?". -->
+<main class="invite">
+  <section class="invite-hero">
+    <div class="wrap invite-card">
+      <img class="invite-icon" src="{{ '/assets/img/icon.png' | relative_url }}" alt="" width="96" height="96">
+      <span class="eyebrow" id="who">You're invited</span>
+      <h1 id="headline">Join your friends on <span class="grad">DARE</span></h1>
+      <p class="lead">One dare a day. Your friends vote.</p>
+
+      <a class="btn" id="store" href="https://getdareapp.com">Get DARE</a>
+      <p class="soon" id="soon">Coming soon to the App Store for iPhone.</p>
+
+      <div class="invite-actions">
+        <a class="btn ghost" id="open" href="dareapp://today">Already have DARE? Open it</a>
+        <button class="btn ghost" id="copy" type="button">Copy invite</button>
+      </div>
+      <p class="note" id="copied" role="status" hidden></p>
+
+      <ul class="invite-steps">
+        <li><span aria-hidden="true">🎲</span> A surprise dare drops once a day, the same for everyone.</li>
+        <li><span aria-hidden="true">📸</span> Post your proof within 30 minutes.</li>
+        <li><span aria-hidden="true">🔥</span> Friends vote. The most flames wins the crown.</li>
+      </ul>
+      <p class="note">This page has no cookies and no tracking.</p>
+    </div>
+  </section>
+</main>
+
+{% include footer.html %}
+
+<script>
+(function () {
+  // TODO(App Store id): fill these in once DARE is on the App Store. Until then
+  // the button goes to the home page. The campaign token (ct) lets App Store
+  // Connect count which invites bring people, without any tracking here.
+  var APP_STORE_ID = "";   // e.g. "6712345678"
+  var PROVIDER_TOKEN = ""; // App Store Connect → App Analytics → Campaigns (pt=)
+
+  var params = new URLSearchParams(window.location.search);
+  var raw = (params.get("u") || "").trim().replace(/^@+/, "").toLowerCase();
+  var handle = /^[a-z0-9._]{3,20}$/.test(raw) ? raw : null;
+  var campaign = params.get("src") === "qr" ? "invite_qr" : "invite_link";
+
+  var store = document.getElementById("store");
+  if (APP_STORE_ID) {
+    var url = "https://apps.apple.com/app/apple-store/id" + APP_STORE_ID + "?ct=" + campaign + "&mt=8";
+    if (PROVIDER_TOKEN) url += "&pt=" + encodeURIComponent(PROVIDER_TOKEN);
+    store.href = url;
+    store.textContent = "Download on the App Store";
+    document.getElementById("soon").hidden = true;
+  }
+
+  var copy = document.getElementById("copy");
+  var copied = document.getElementById("copied");
+  if (!handle) {
+    // No (or a broken) username: a plain invite to DARE.
+    copy.hidden = true;
+    return;
+  }
+
+  var invite = "https://getdareapp.com/add/?u=" + handle;
+  document.title = "@" + handle + " invited you to DARE";
+  document.getElementById("who").textContent = "@" + handle + " invited you";
+  var headline = document.getElementById("headline");
+  headline.textContent = "Add @" + handle + " on ";
+  var brand = document.createElement("span");
+  brand.className = "grad";
+  brand.textContent = "DARE";
+  headline.appendChild(brand);
+  document.getElementById("open").href = "dareapp://add/" + handle;
+
+  function done(ok) {
+    copied.textContent = ok
+      ? "Copied. Once DARE is installed, paste it in the app (Me → Add friends) to add @" + handle + "."
+      : "Copy this link: " + invite;
+    copied.hidden = false;
+  }
+  copy.addEventListener("click", function () {
+    var text = "Add @" + handle + " on DARE: " + invite;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+    } else {
+      done(false);
+    }
+  });
+})();
+</script>
+</body>
+</html>

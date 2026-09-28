@@ -6,3 +6,7 @@ defaults:
   - scope: { path: "" }
     values: { layout: page }
 exclude: [README.md]
+# Universal Links: Jekyll skips dot folders unless they're listed. The file
+# .well-known/apple-app-site-association (no extension, no front matter) is
+# copied as-is, so invite links (/add/ and /s/) open the DARE app.
+include: [".well-known"]
