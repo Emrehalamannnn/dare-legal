@@ -6,7 +6,7 @@ permalink: /privacy
 
 # DARE Privacy Policy
 
-_Last updated: September 25, 2026_
+_Last updated: September 28, 2026_
 
 DARE ("we", "us") is a social app where friends do a daily dare and vote on
 each other's proof. This policy explains what we collect, why, and your
@@ -54,6 +54,7 @@ think a decision was wrong, email us and a person will look at it.
 - **Everyone** can see your daily posts on Discover only if your account is **public**. Under-18 accounts start private.
 - **Hall of Fame** only shows you if you said yes.
 - **Squads:** people in a squad see each other's names, avatars and weekly points on the squad's leaderboard, friends or not (a squad doesn't show them your posts). Anyone with a squad's invite link can join; its creator and admins can reset the link and remove people.
+- **People you may know:** DARE may suggest you to friends of your friends and to people in your squads (with your name, username and avatar), so they can send you a friend request. It never uses anyone's contacts. Under-18s are only suggested to people they share at least 2 friends or a squad with, and never with their photo. You can turn this off in **Settings → Suggest me to friends of friends**.
 - Blocked people can't see you.
 
 ## How long we keep it
