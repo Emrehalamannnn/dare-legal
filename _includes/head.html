@@ -11,12 +11,10 @@
 <meta property="og:url" content="https://getdareapp.com{{ page.url | replace: 'index.html', '' }}">
 {% if page.invite %}
 <!-- Invite pages: personal links, so not in search results, no referrer sent
-     anywhere, and nothing loaded from other sites (no web fonts, no tracking). -->
+     anywhere. -->
 <meta name="robots" content="noindex">
 <meta name="referrer" content="no-referrer">
-{% else %}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 {% endif %}
+<!-- No page loads anything from other sites (no web fonts, no analytics, no
+     tracking): visitors' IP addresses only reach GitHub Pages. -->
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">

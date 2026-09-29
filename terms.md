@@ -6,7 +6,7 @@ permalink: /terms
 
 # DARE Terms of Use
 
-_Last updated: September 28, 2026_
+_Last updated: September 29, 2026_
 
 Welcome to DARE. By creating an account or using the app you agree to these
 terms and to our [Privacy Policy]({{ "/privacy" | relative_url }}). If you don't agree, please don't
@@ -14,12 +14,14 @@ use DARE.
 
 ## 1. Who can use DARE
 
-- You must be **at least 13 years old**.
+- You must be **at least 13 years old** (**16** in Australia and Brazil, where the
+  law sets that age for social apps).
 - If you're under 18, you need a parent's or guardian's permission. Under-18
   accounts only get safe dares, start as private accounts, and every post is
   checked more strictly.
-- You must give your real birthdate. We use it only to keep younger players
-  safe, and nobody else can see it.
+- You must give your real birthdate. We use it to keep younger players safe,
+  to apply the minimum age, and to pick the ad rules for your age group, and
+  nobody else can see it.
 - One person, one account. Keep your sign-in private; you're responsible for
   what happens on your account.
 
@@ -69,13 +71,14 @@ You own the photos, videos and text you post. By posting, you give DARE a
 free, worldwide license to store, show and share that content **inside DARE**
 (for example to your friends, or on Discover if your account is public) so
 the app can work. This license ends when you delete the content or your
-account, except for copies we must keep for safety or legal reasons for a
-short time. Only post content you have the right to post.
+account, except for copies we must keep for safety or legal reasons, for as
+long as the Privacy Policy says. Only post content you have the right to post.
 
 ## 6. DARE+ and purchases
 
 - **DARE+** is an optional auto-renewing subscription. Payment is charged to
-  your Apple Account when you confirm the purchase. It renews automatically
+  your Apple Account when you confirm the purchase or, if you start with a
+  free trial, when the trial ends. It renews automatically
   unless you turn it off at least 24 hours before the end of the current
   period. You can manage or cancel it in your App Store account settings.
 - Refunds are handled by Apple under its rules
